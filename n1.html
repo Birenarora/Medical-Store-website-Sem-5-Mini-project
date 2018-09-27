@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Rudra Medical</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type='text/javascript'>
+        function validation(){
+            if (document.med.pid.value == ""){
+                alert("Medicine ID should not be empty")
+                return false;
+            }
+            if (document.med.pname.value == ""){
+                alert("Medicine Name should not be empty")
+                return false;
+            }
+            if (document.med.ptype.value == ""){
+                alert("Medicine Type should not be empty")
+                return false;
+            }
+            if (document.med.mfgdate.value == ""){
+                alert("MFG Date should not be empty")
+                return false;
+            }
+            if (document.med.expdate.value == ""){
+                alert("EXP Date should not be empty")
+                return false;
+            }
+            if (document.med.price.value == ""){
+                alert("Price should not be empty")
+                return false;
+            }
+            if (document.med.quantity.value == ""){
+                alert("Quantity should not be empty")
+                return false;
+            }
+            return true;
+        }       
+    </script>
+<style type="text/css" media="screen">
+    table{
+        margin: 10%;
+        width: 30%; 
+        height: 60%;
+        border: 2px solid red;
+        border-collapse: collapse;
+        border-: 2px;
+        background: rgba(0,0,0,0.5);
+    }
+    td{
+        color: white;
+        font-size: 1.3vw;
+    }
+    body{
+        background-image: url(exp.jpg);
+        background-size: 100% 100%;
+    }
+    input{
+        font-size: 1vw;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+    <a href="tp.html"><button type="button" class="btn btn-outline-dark btn-lg btn-block">Back</button></a>
+    </div>
+    <center>
+        <form name='med' method="POST" action="n.php"  onsubmit="return validation()">
+            <table>
+                <tr><td><h2 style="color: white;">Medicine Details</h2></td></tr>
+                <tr>
+                    <td><b>Medicine ID:</b></td>  <td><input type="text" id="pid" name="pid"> </td>
+                </tr>
+                <tr>
+                    <td><b>Medicine Name:</b></td>  <td><input type="text" id="pname" name="pname"> </td>
+                </tr>
+                <tr>
+                    <td><b>Medicine Type:</b></td> <td><input type="text" id="ptype" name="ptype"> </td>
+                </tr>
+                <tr>
+                    <td><b>MFG date:</b></td> <td><input type="date" id="mfgdate" name="mfgdate"> </td>
+                </tr>
+                <tr>
+                    <td><b>EXP date:</b></td> <td><input type="date" id="expdate" name="expdate"> </td>
+                </tr>
+                <tr>
+                    <td><b>Price:</b></td> <td><input type="text" id="price" name="price"> </td>
+                </tr>
+                <tr>
+                    <td><b>Quantity:</b></td> <td><input type="number" id="quantity" name="quantity"> </td>
+                </tr>
+                <tr>                    
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Insert" style="background-color: #73AD21; color: white;"> </td>
+                </tr>                
+            </table>
+        </form>
+    </center>
+</body>
+</html>
+
